@@ -1,0 +1,35 @@
+<script type="text/javascript">
+
+class person{
+    constructor(name,age,country){
+        this.name=name;
+        this.age=age;
+        this.country=country;
+    };
+    personsDetails(){
+        console.log(`Name:- ${this.name}`);
+        console.log(`Name:- ${this.age}`);
+        console.log(`Name:- ${this.country}`);
+    }
+}
+const name1=prompt("Enter Name of person-1:-");
+const age1=prompt("Enter age of person-1:-");
+const country1=prompt("Enter country of person-1:-");
+
+const person1 = new person(name1, age1, country1);
+
+const name2=prompt("Enter Name of person-2:-");
+const age2=prompt("Enter age of person-2:-");
+const country2=prompt("Enter country of person-2:-");
+
+const person2 = new person(name2, age2, country2);
+
+console.log("First Person Details:-");
+person1.personsDetails();
+
+console.log("====================");
+
+console.log("Second Person Details:-");
+person2.personsDetails();
+
+</script>

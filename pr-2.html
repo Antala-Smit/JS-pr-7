@@ -1,0 +1,41 @@
+<script type="text/javascript">
+
+class bankaccount{
+    constructor(accountnumber,balance){
+        this.accountnumber = accountnumber;
+        this.balance = balance;
+        
+        console.log(`Acc.No:- ${accountnumber}`);
+        console.log(`Balance:- ${balance}`);
+    }
+    deposit(amount){
+        this.balance = this.balance+amount;
+        console.log(`Deposit:- ${amount}`);
+    }
+    withdraw(amount){
+        if(amount<=this.balance){
+            this.balance = this.balance-amount;
+            console.log(`Withdraw:- ${amount}`);
+        }else{
+            console.log(`Your withdraw amount :- ${amount}`);
+            console.log(`Insfficient balance`);
+        } 
+    }
+    displayBalance(){
+        console.log(`Acc. Balance:- ${this.balance}`);
+    }
+}
+const number = parseInt(prompt("Enter Your Account No:-"));
+const balance = parseInt(prompt("Enter Your Balance:-"));
+const account = new bankaccount(number,balance);
+account.displayBalance();
+
+const depositBalance = parseInt(prompt("Enter Your deposit amount:-"));
+account.deposit(depositBalance);
+
+const withdrawBalance = parseInt(prompt("Enter Your withdraw amount:-"));
+account.withdraw(withdrawBalance);
+
+console.log(`Acc. Balance:- ${account.balance}`);
+
+</script>
